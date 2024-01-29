@@ -1,7 +1,9 @@
 <main class="main">
-  <div class="content">
-    <section><app-user></app-user></section>
-  </div>
+  @if (isServerRunning){
+    <span>Yes, the server is running</span>
+  }@else {
+    <span>No, the server is not running</span>
+  }
 </main>
 
 <router-outlet></router-outlet>
