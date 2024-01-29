@@ -1,5 +1,6 @@
 <main class="main">
-  <app-user name="Simran"/>
+  <app-child (addItemEvent)="addItem($event)" />
+  <p>🐢 all the way down {{ items.length }}</p>
 </main>
 
 <router-outlet></router-outlet>
