@@ -1,7 +1,5 @@
 <main class="main">
-  @for (user of users; track user.id) {
-    <p>{{ user.name }}</p>
-  }
+  <div [contentEditable]="isEditable"></div>
 </main>
 
 <router-outlet></router-outlet>
