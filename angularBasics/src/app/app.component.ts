@@ -6,12 +6,13 @@ import { ChildComponent } from './child/child.component';
 import { CommentsComponent } from './comments/comments.component';
 import {ReactiveFormsModule, FormControl, FormGroup, Validators } from '@angular/forms';
 import { CarService } from './car.service';
+import { LowerCasePipe } from '@angular/common';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, RouterLink, UserComponent, ChildComponent, CommentsComponent,ReactiveFormsModule],
+  imports: [CommonModule, RouterOutlet, RouterLink, UserComponent, ChildComponent, CommentsComponent,ReactiveFormsModule, LowerCasePipe],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
