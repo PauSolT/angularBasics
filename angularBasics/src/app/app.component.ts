@@ -16,7 +16,14 @@ import { CarService } from './car.service';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  display = '';
   carService = inject(CarService);
+
+  constructor() {
+    this.display = this.carService.getCars().join(' ⭐️ ');
+  }
 }
+
+
 
 
