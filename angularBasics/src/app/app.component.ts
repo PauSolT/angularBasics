@@ -7,19 +7,18 @@ import { CommentsComponent } from './comments/comments.component';
 import {ReactiveFormsModule, FormControl, FormGroup, Validators } from '@angular/forms';
 import { CarService } from './car.service';
 import { LowerCasePipe } from '@angular/common';
+import {ReversePipe} from './reverse.pipe';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, RouterLink, UserComponent, ChildComponent, CommentsComponent,ReactiveFormsModule, LowerCasePipe, DecimalPipe, DatePipe, CurrencyPipe],
+  imports: [CommonModule, RouterOutlet, RouterLink, UserComponent, ChildComponent, CommentsComponent,ReactiveFormsModule, LowerCasePipe, DecimalPipe, DatePipe, CurrencyPipe, ReversePipe],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  num = 103.1234;
-  birthday = new Date(2023, 3, 2);
-  cost = 4560.34;
+  word = 'You are a champion';
 }
 
 
