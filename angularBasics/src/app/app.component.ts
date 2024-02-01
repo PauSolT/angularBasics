@@ -1,10 +1,11 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet, RouterLink } from '@angular/router';
 import { UserComponent } from './user/user.component';
 import { ChildComponent } from './child/child.component';
 import { CommentsComponent } from './comments/comments.component';
 import {ReactiveFormsModule, FormControl, FormGroup, Validators } from '@angular/forms';
+import { CarService } from './car.service';
 
 
 @Component({
@@ -15,15 +16,7 @@ import {ReactiveFormsModule, FormControl, FormGroup, Validators } from '@angular
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  profileForm = new FormGroup({
-    name: new FormControl('', Validators.required),
-    email: new FormControl('', Validators.required),
-  });
-  handleSubmit() {
-    alert(
-      this.profileForm.value.name + ' | ' + this.profileForm.value.email
-    );
-  }
+  carService = inject(CarService);
 }
 
 
