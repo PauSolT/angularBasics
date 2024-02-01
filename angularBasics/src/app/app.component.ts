@@ -4,7 +4,7 @@ import { RouterOutlet, RouterLink } from '@angular/router';
 import { UserComponent } from './user/user.component';
 import { ChildComponent } from './child/child.component';
 import { CommentsComponent } from './comments/comments.component';
-import {ReactiveFormsModule, FormControl, FormGroup } from '@angular/forms';
+import {ReactiveFormsModule, FormControl, FormGroup, Validators } from '@angular/forms';
 
 
 @Component({
@@ -16,8 +16,8 @@ import {ReactiveFormsModule, FormControl, FormGroup } from '@angular/forms';
 })
 export class AppComponent {
   profileForm = new FormGroup({
-    name: new FormControl(''),
-    email: new FormControl(''),
+    name: new FormControl('', Validators.required),
+    email: new FormControl('', Validators.required),
   });
   handleSubmit() {
     alert(
